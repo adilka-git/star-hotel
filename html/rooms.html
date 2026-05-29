@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Номера — Star Hotel</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <a class="header__logo" href="../index.html">
+      <div class="header__logo-text">
+        <h1 class="header__title">Star Hotel</h1>
+        <div class="header__stars" aria-label="5 звёзд">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+        </div>
+      </div>
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+        <li class="nav__item"><a class="nav__link" href="reservation.html">Бронирование</a></li>
+      </ul>
+      <button class="nav__burger" id="nav-burger" aria-label="Открыть меню">&#9776;</button>
+    </nav>
+    <div class="header__user" id="header-user" style="display:none;"><span class="header__username" id="header-username"></span><button class="header__logout" id="header-logout">Выйти</button></div>
+    <div class="header__actions">
+      <a class="header__signin" href="signin.html"><span class="signin__text">Sign in</span><span class="signin__icon" aria-hidden="true">&#9786;</span></a>
+    </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Сменить тему">☽</button>
+  </header>
+
+  <main class="main">
+
+    <section class="rooms" aria-labelledby="rooms-heading">
+      <h2 class="rooms__heading" id="rooms-heading">Наши номера</h2>
+
+      <div class="rooms__controls" id="rooms-controls">
+        <input class="rooms__search" id="rooms-search" type="text" placeholder="Поиск по названию..." />
+        <select class="rooms__filter" id="rooms-filter">
+          <option value="all">Все номера</option>
+          <option value="standard">Стандартный</option>
+          <option value="suite">Люкс</option>
+        </select>
+        <select class="rooms__sort" id="rooms-sort">
+          <option value="default">По умолчанию</option>
+          <option value="price-asc">Сначала дешевле</option>
+          <option value="price-desc">Сначала дороже</option>
+          <option value="name-asc">По названию А-Я</option>
+        </select>
+      </div>
+
+      <p class="rooms__empty" id="rooms-empty" style="display:none;">Ничего не найдено</p>
+      <div class="rooms__grid" id="rooms-grid"></div>
+    </section>
+
+    <section class="amenities" aria-labelledby="amenities-heading">
+      <h2 class="amenities__heading" id="amenities-heading">Услуги отеля</h2>
+      <!-- Услуги создаются через JavaScript -->
+      <ul class="amenities__list" id="amenities-list"></ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contacts">
+      <address class="footer__address">
+        <p>Адрес: проспект Абая 21</p>
+      </address>
+      <div class="footer__manager">
+        <p>Менеджер: Патрик</p>
+        <p>8 800 08 08 08</p>
+      </div>
+    </div>
+      <button class="footer__call-btn" id="footer-call-btn">📞 Позвонить нам</button>
+    <div class="footer__bottom">
+      <p>2026 Star Hotel.</p>
+    </div>
+  </footer>
+
+
+  <!-- Модальное окно -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__overlay" id="modal-overlay"></div>
+    <div class="modal__window">
+      <button class="modal__close" id="modal-close" aria-label="Закрыть">&#10005;</button>
+      <h3 class="modal__title" id="modal-title">Позвонить нам</h3>
+      <p class="modal__text">Менеджер: Патрик</p>
+      <p class="modal__text modal__phone">8 800 555 35 35</p>
+      <a class="modal__btn" href="tel:88005553535">Позвонить</a>
+    </div>
+  </div>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

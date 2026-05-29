@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вход — Star Hotel</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <a class="header__logo" href="../index.html">
+      <div class="header__logo-text">
+        <h1 class="header__title">Star Hotel</h1>
+        <div class="header__stars" aria-label="5 звёзд">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+        </div>
+      </div>
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+        <li class="nav__item"><a class="nav__link" href="rooms.html">Номера</a></li>
+        <li class="nav__item"><a class="nav__link" href="reservation.html">Бронирование</a></li>
+      </ul>
+      <button class="nav__burger" id="nav-burger" aria-label="Открыть меню">&#9776;</button>
+    </nav>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Сменить тему">☽</button>
+  </header>
+
+  <main class="main">
+
+    <section class="signin-section" aria-labelledby="signin-heading">
+      <div class="signin__card">
+        <h2 class="signin__heading" id="signin-heading">Войти в аккаунт</h2>
+        <form class="signin__form" action="#" method="post" novalidate>
+          <div class="form__group">
+            <label class="form__label" for="email">Email</label>
+            <input class="form__input" type="email" id="email" name="email" placeholder="example@mail.com" required />
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="password">Пароль</label>
+            <input class="form__input" type="password" id="password" name="password" placeholder="Введите пароль" required />
+          </div>
+          <div class="form__actions">
+            <button class="btn btn--primary" type="submit">Войти</button>
+          </div>
+          <p class="signin__register">Нет аккаунта? <a href="#" id="show-register">Зарегистрироваться</a></p>
+        </form>
+
+        <form class="register__form" id="register-form" style="display:none;" novalidate>
+          <div class="form__group">
+            <label class="form__label" for="reg-name">Имя</label>
+            <input class="form__input" type="text" id="reg-name" placeholder="Введите имя" />
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="reg-email">Email</label>
+            <input class="form__input" type="email" id="reg-email" placeholder="example@mail.com" />
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="reg-password">Пароль</label>
+            <input class="form__input" type="password" id="reg-password" placeholder="Минимум 6 символов" />
+          </div>
+          <div class="form__actions">
+            <button class="btn btn--primary" type="button" id="register-btn">Зарегистрироваться</button>
+          </div>
+          <p class="signin__register">Уже есть аккаунт? <a href="#" id="show-login">Войти</a></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contacts">
+      <address class="footer__address">
+        <p>Адрес: проспект Абая 21</p>
+      </address>
+      <div class="footer__manager">
+        <p>Менеджер: Патрик</p>
+        <p>8 800 08 08 08</p>
+      </div>
+    </div>
+      <button class="footer__call-btn" id="footer-call-btn">📞 Позвонить нам</button>
+    <div class="footer__bottom">
+      <p>2026 Star Hotel.</p>
+    </div>
+  </footer>
+
+
+  <!-- Модальное окно -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__overlay" id="modal-overlay"></div>
+    <div class="modal__window">
+      <button class="modal__close" id="modal-close" aria-label="Закрыть">&#10005;</button>
+      <h3 class="modal__title" id="modal-title">Позвонить нам</h3>
+      <p class="modal__text">Менеджер: Патрик</p>
+      <p class="modal__text modal__phone">8 800 555 35 35</p>
+      <a class="modal__btn" href="tel:88005553535">Позвонить</a>
+    </div>
+  </div>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

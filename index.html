@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Star Hotel</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__logo">
+      <div class="header__logo-text">
+        <h1 class="header__title">Star Hotel</h1>
+        <div class="header__stars" aria-label="5 звёзд">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+        </div>
+      </div>
+    </div>
+    <nav class="nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="html/rooms.html">Номера</a></li>
+        <li class="nav__item"><a class="nav__link" href="html/reservation.html">Бронирование</a></li>
+      </ul>
+      <button class="nav__burger" id="nav-burger" aria-label="Открыть меню">&#9776;</button>
+    </nav>
+    <div class="header__user" id="header-user" style="display:none;"><span class="header__username" id="header-username"></span><button class="header__logout" id="header-logout">Выйти</button></div>
+    <div class="header__actions">
+      <a class="header__signin" href="html/signin.html"><span class="signin__text">Sign in</span><span class="signin__icon" aria-hidden="true">&#9786;</span></a>
+    </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Сменить тему">☽</button>
+  </header>
+
+  <main class="main">
+
+    <section class="hero" aria-label="Главный баннер">
+      <div class="hero__content">
+        <h2 class="hero__title">Добро пожаловать в Star Hotel</h2>
+        <p class="hero__subtitle">Проспект Абая 21 — комфорт, который становится искусством</p>
+        <a class="hero__btn" href="html/reservation.html">Забронировать номер</a>
+      </div>
+      <div class="hero__image">
+        <img src="images/hotel.jpg" alt="Внешний вид отеля Star Hotel" />
+      </div>
+    </section>
+
+    <section class="about" aria-labelledby="about-heading">
+      <div class="about__image">
+        <img src="images/lobby.jpg" alt="Ресепшн отеля" />
+      </div>
+      <div class="about__text">
+        <h2 class="about__heading" id="about-heading">О нас</h2>
+        <p>«Star Hotel» — уютный и современный отель с комфортными номерами и высоким уровнем сервиса. Идеальное место для отдыха и деловых поездок.</p>
+      </div>
+    </section>
+
+    <section class="rooms" aria-labelledby="rooms-heading">
+      <h2 class="rooms__heading" id="rooms-heading">Наши номера</h2>
+      <!-- Карточки создаются через JavaScript -->
+      <div class="rooms__grid" id="rooms-grid"></div>
+    </section>
+
+    <section class="slogan" aria-labelledby="slogan-heading">
+      <div class="slogan__image">
+        <img src="images/rest.jpg" alt="Интерьер ресторана отеля" />
+      </div>
+      <div class="slogan__content">
+        <h2 class="slogan__title">Ресторан Bella Vista</h2>
+        <p class="slogan__text">Итальянский ресторан с авторской кухней прямо в сердце отеля. Свежая паста, дровяная пицца и изысканные вина — всё это в атмосфере уюта и тепла.</p>
+        <ul class="slogan__details">
+          <li>Кухня: итальянская</li>
+          <li>Режим работы: 07:00 — 23:00</li>
+          <li>Завтрак включён в стоимость номера</li>
+        </ul>
+        <blockquote class="slogan__quote">
+          <p>«Star Hotel — место, где комфорт становится искусством.»</p>
+        </blockquote>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__contacts">
+      <address class="footer__address">
+        <p>Адрес: проспект Абая 21</p>
+      </address>
+      <div class="footer__manager">
+        <p>Менеджер: Патрик</p>
+        <p>8 800 555 35 35</p>
+      </div>
+    </div>
+      <button class="footer__call-btn" id="footer-call-btn">📞 Позвонить нам</button>
+    <div class="footer__bottom">
+      <p>2026 Star Hotel.</p>
+    </div>
+  </footer>
+
+
+  <!-- Модальное окно -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__overlay" id="modal-overlay"></div>
+    <div class="modal__window">
+      <button class="modal__close" id="modal-close" aria-label="Закрыть">&#10005;</button>
+      <h3 class="modal__title" id="modal-title">Позвонить нам</h3>
+      <p class="modal__text">Менеджер: Патрик</p>
+      <p class="modal__text modal__phone">8 800 555 35 35</p>
+      <a class="modal__btn" href="tel:88005553535">Позвонить</a>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
